@@ -1,0 +1,14 @@
+{
+    "name": "flotiq-api-ts",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "postinstall": "npx flotiq-codegen-ts generate"
+    },
+    "author": "Flotiq <hello@flotiq.com>",
+    "license": "ISC",
+    "dependencies": {
+        "flotiq-codegen-ts": "^1.2.2"
+    }
+}
