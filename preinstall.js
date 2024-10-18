@@ -1,9 +1,6 @@
 const path = require('path');
-require('dotenv').config();
+require('dotenv').config({path: path.resolve(process.env.INIT_CWD, '.env')});
 
-
-throw new Error(process.cwd());
-
-if(!process.env.FLOTIQ_API_KEY) {
-    throw new Error('Missing FLOTIQ_API_KEY environment variable');
+if (!process.env.FLOTIQ_API_KEY) {
+    throw new Error(`Env FLOTIQ_API_KEY not found in  ${process.env.INIT_CWD}`);
 }
