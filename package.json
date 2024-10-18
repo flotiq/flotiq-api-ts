@@ -6,7 +6,6 @@
     "typings": "./flotiqApi/dist/index.d.ts",
     "module": "./flotiqApi/dist/esm/index.js",
     "scripts": {
-        "preinstall": "node preinstall.js",
         "postinstall": "node postinstall.js"
     },
     "author": "Flotiq <hello@flotiq.com>",
