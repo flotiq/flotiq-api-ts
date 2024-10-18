@@ -2,13 +2,17 @@
     "name": "flotiq-api-ts",
     "version": "0.1.0",
     "description": "",
-    "main": "index.js",
+    "main": "./flotiqApi/dist/index.js",
+    "typings": "./flotiqApi/dist/index.d.ts",
+    "module": "./flotiqApi/dist/esm/index.js",
     "scripts": {
-        "postinstall": "npx flotiq-codegen-ts generate"
+        "preinstall": "node preinstall.js",
+        "postinstall": "node postinstall.js"
     },
     "author": "Flotiq <hello@flotiq.com>",
     "license": "ISC",
     "dependencies": {
-        "flotiq-codegen-ts": "^1.2.2"
+        "dotenv": "^16.4.5",
+        "flotiq-codegen-ts": "github:flotiq/flotiq-codegen-ts#support-cjs-mjs"
     }
 }
