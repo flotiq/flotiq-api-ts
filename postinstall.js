@@ -4,6 +4,7 @@ require('dotenv').config();
 
 const { exec, spawn } = require('child_process');
 
+throw new Error(process.cwd());
 
 console.log('Zmienna FLOTIQ_API_KEY:', process.env.FLOTIQ_API_KEY);
 
