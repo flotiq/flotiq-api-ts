@@ -1,5 +1,7 @@
-// postinstall.js
-require('dotenv').config({path: '.env'});
+const path = require('path');
+require('dotenv').config({ path: path.resolve(process.cwd(), '.env') });
+
+
 const { exec, spawn } = require('child_process');
 
 
