@@ -9,7 +9,7 @@ const env = dotenvFlow.parse(
 );
 
 if (!env.FLOTIQ_API_KEY) {
-    throw new Error(`Env FLOTIQ_API_KEY not found in  ${env.INIT_CWD}`);
+    throw new Error(`Env FLOTIQ_API_KEY not found in  ${process.env.INIT_CWD}`);
 }
 
 // Execute the flotiq-codegen-ts process.
