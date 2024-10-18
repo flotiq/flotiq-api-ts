@@ -1,6 +1,11 @@
-const path = require('path');
-require('dotenv').config({path: path.resolve(process.env.INIT_CWD, '.env')});
+const dotenvFlow = require('dotenv-flow');
 
-if (!process.env.FLOTIQ_API_KEY) {
+const env = dotenvFlow.parse(
+    dotenvFlow.listFiles({
+        path: process.env.INIT_CWD,
+    })
+);
+
+if (!env.FLOTIQ_API_KEY) {
     throw new Error(`Env FLOTIQ_API_KEY not found in  ${process.env.INIT_CWD}`);
 }
