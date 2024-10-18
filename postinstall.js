@@ -4,10 +4,12 @@ require('dotenv').config();
 
 const { exec, spawn } = require('child_process');
 
-throw new Error(process.env.INIT_CWD);
 
 console.log('Zmienna FLOTIQ_API_KEY:', process.env.FLOTIQ_API_KEY);
 
+if (!process.env.FLOTIQ_API_KEY) {
+    throw new Error('env not found: ' + JSON.stringify([process.env.INIT_CWD, __dirname, process.cwd()]));
+}
 
 const codegen = spawn('npx', ['git@github.com:flotiq/flotiq-codegen-ts.git#support-cjs-mjs', '--compiled-js']);
 
