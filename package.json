@@ -1,6 +1,6 @@
 {
     "name": "flotiq-api-ts",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "",
     "main": "./flotiqApi/dist/index.js",
     "typings": "./flotiqApi/dist/index.d.ts",
