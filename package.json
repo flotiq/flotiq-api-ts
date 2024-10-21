@@ -1,6 +1,6 @@
 {
     "name": "fqapi-ts-tst",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "",
     "main": "./flotiqApi/dist/index.js",
     "typings": "./flotiqApi/dist/index.d.ts",
