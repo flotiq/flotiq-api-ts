@@ -8,7 +8,7 @@ const env = dotenvFlow.parse(
     })
 );
 
-if (!env.FLOTIQ_API_KEY) {
+if (!env.FLOTIQ_API_KEY || process.env.FLOTIQ_API_KEY) {
     throw new Error(`Env FLOTIQ_API_KEY not found in  ${process.env.INIT_CWD}`);
 }
 
@@ -25,7 +25,7 @@ codegen.stdout.on('data', (data) => {
     }
 
     if (output.includes('Please enter your Flotiq')) {
-        codegen.stdin.write(env.FLOTIQ_API_KEY);
+        codegen.stdin.write(env.FLOTIQ_API_KEY || process.env.FLOTIQ_API_KEY);
         codegen.stdin.write('\n');
     }
 });
