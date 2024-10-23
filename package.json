@@ -1,10 +1,7 @@
 {
-    "name": "fqapi-ts-tst",
-    "version": "0.1.7",
+    "name": "flotiq-api-ts",
+    "version": "0.0.1",
     "description": "",
-    "main": "./flotiqApi/dist/index.js",
-    "typings": "./flotiqApi/dist/index.d.ts",
-    "module": "./flotiqApi/dist/esm/index.js",
     "scripts": {
         "postinstall": "node postinstall.js"
     },
