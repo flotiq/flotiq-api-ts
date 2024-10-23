@@ -6,6 +6,7 @@ const env = dotenvFlow.parse(
     dotenvFlow.listFiles({
         path: process.env.INIT_CWD,
     })
+
 );
 
 if (!env.FLOTIQ_API_KEY && !process.env.FLOTIQ_API_KEY) {

@@ -1,7 +1,10 @@
 {
     "name": "flotiq-api-ts",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
+    "main": "./flotiqApi/dist/index.js",
+    "typings": "./flotiqApi/dist/index.d.ts",
+    "module": "./flotiqApi/dist/esm/index.js",
     "scripts": {
         "postinstall": "node postinstall.js"
     },
