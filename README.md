@@ -41,3 +41,12 @@ To develop package, install dependencies and run yarn install
 1. Create `.env` file with `FLOTIQ_API_KEY=__YOUR_FLOTIQ_API_KEY__`
 2. Run `npm install` command, this will fire postinstall script
 3. In root directory there is `./flotiqApi` sdk
+
+
+## Publishing
+
+Run:
+```
+npm login
+npm publish
+```
