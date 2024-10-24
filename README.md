@@ -1,13 +1,43 @@
-# flotiq-api-ts
+# Flotiq API TypeScript SDK
 
-This package is a placeholder for FlotiqApi content generated with flotiq-codegen-ts generate command.
-For more information check task #25472 description
+`flotiq-api-ts` is a package that installs a personalized SDK for Flotiq based on `flotiq-codegen-ts`. This package includes all the necessary TypeScript bindings to interact with the Flotiq API directly from your project.
 
-To alter the effects of running npm install on this package modify the `postinstall` script in package.json:
+For more details on the underlying SDK, visit the repository: [flotiq-codegen-ts](https://github.com/flotiq/flotiq-codegen-ts).
 
-* `"postinstall": "npx flotiq-codegen-ts generate"` - the package will attempt to generate FlotiqApi content, but it will send prompt asking for Flotiq api key. If the package was added to another project (with `npm install '<path to flotiq-api-ts>'`) the prompt **will not** show up, and the npm install process will be stuck.
-* `"postinstall": "echo 'apikey' | npx flotiq-codegen-ts generate"` - the package will generate FlotiqApi for key provided in `apikey` argument for `echo` command
-* `"postinstall": "npx flotiq-codegen-ts generate"  < input-file.txt"` - same as above, but the apikey will be taken from the first line of `input-file.txt` file
-* `"postinstall": "npx flotiq-codegen-ts generate && mv flotiqApi/* ./"` - (can be combined with 2 above providing paikey) the content of generated FlotiqApi will be moved to parent folder, but the `package.json` file will be replaced potentially causing issues
+## Requirements
 
-The option of providing ApiKey from .env file instead of hardcoding it in postinstall script is yet to be worked out
+In order to install and use this package, the project must have an environment variable defined for the Flotiq API key. This can be provided in one of the following ways:
+- Define `FLOTIQ_API_KEY` in a `.env` or `.env.local` file in the project root.
+- Set the `FLOTIQ_API_KEY` environment variable in your system.
+
+The API key is necessary for installing SDK package related to your Content Type Definitions in Flotiq.
+
+## Installation
+
+To install the package, run the following command in your project:
+
+```bash
+yarn add flotiq-api-ts
+```
+
+## Usage
+
+Once installed, you can import and use the `FlotiqApi` to interact with the Flotiq API:
+
+```typescript
+import { FlotiqApi } from "flotiq-api-ts";
+
+// Example of usage
+const flotiq = new FlotiqApi();
+```
+
+Make sure that you have your `FLOTIQ_API_KEY` correctly set before making any requests.
+
+
+## Development
+
+To develop package, install dependencies and run yarn install
+
+1. Create `.env` file with `FLOTIQ_API_KEY=__YOUR_FLOTIQ_API_KEY__`
+2. Run `yarn` command, this will fire postinstall script
+3. In root directory there is `./flotiqApi` sdk
