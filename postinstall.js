@@ -29,7 +29,8 @@ codegen.stdout.on('data', (data) => {
     }
 
     if (!typedKey && output.includes('Please enter your Flotiq')) {
-        codegen.stdin.write('7e730a3a15bd5f8ad098111a28eb1306\n');
+        codegen.stdin.write(env.FLOTIQ_API_KEY || process.env.FLOTIQ_API_KEY);
+        codegen.stdin.write('\n');
         typedKey = true;
     }
 });
