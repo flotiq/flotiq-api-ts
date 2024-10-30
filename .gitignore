@@ -2,3 +2,4 @@ node_modules
 flotiqApi
 .idea
 .env
+sdk.log

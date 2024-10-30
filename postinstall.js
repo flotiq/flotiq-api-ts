@@ -1,5 +1,7 @@
 const dotenvFlow = require('dotenv-flow');
 const { spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 // Use .env from main directory
 const env = dotenvFlow.parse(
@@ -40,5 +42,7 @@ codegen.stderr.on('data', (data) => {
 });
 
 codegen.on('close', (code) => {
-    console.log(`Closed: ${code}`);
+    const timestamp = new Date().toISOString();
+    const filePath = path.join(__dirname, 'sdk.log');
+    fs.appendFile(filePath, `Generated SDK on postinstall: ${timestamp}\n`, () => {});
 });
