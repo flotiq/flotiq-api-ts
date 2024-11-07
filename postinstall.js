@@ -17,7 +17,7 @@ if (!env.FLOTIQ_API_KEY && !process.env.FLOTIQ_API_KEY) {
 
 // Execute the flotiq-codegen-ts process.
 // It can be simplified when the codegen is available as a function or when the key becomes a parameter
-const codegen = spawn('npx', ['git@github.com:flotiq/flotiq-codegen-ts.git#support-cjs-mjs', '--compiled-js']);
+const codegen = spawn('npx', ['git@github.com:flotiq/flotiq-codegen-ts.git', '--compiled-js']);
 
 let typedEnv = false;
 let typedKey = false
